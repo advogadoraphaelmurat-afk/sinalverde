@@ -109,7 +109,7 @@ a {
   z-index: 100;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background: rgba(var(--bg-color), 0.7);
+  background: var(--card-bg);
   border-bottom: 1px solid var(--border-color);
   transition: all 0.3s ease;
 }
