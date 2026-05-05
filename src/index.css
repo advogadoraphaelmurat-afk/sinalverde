@@ -109,8 +109,8 @@ a {
   z-index: 100;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background: var(--card-bg);
-  border-bottom: 1px solid var(--border-color);
+  background: rgba(15, 23, 42, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 
@@ -120,7 +120,7 @@ a {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--text-main);
+  color: #ffffff;
   letter-spacing: -0.02em;
 }
 
@@ -138,12 +138,12 @@ a {
 .nav-link {
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.7);
   transition: color 0.2s ease;
 }
 
 .nav-link:hover {
-  color: var(--text-main);
+  color: #ffffff;
 }
 
 .nav-actions {
@@ -155,7 +155,7 @@ a {
 .btn-login {
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--text-main);
+  color: #ffffff;
 }
 
 .btn-primary {
