@@ -29,81 +29,83 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="hero">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="hero-pill"
-        >
-          <Zap size={16} color="var(--primary-color)" />
-          A nova era da assessoria paralegal
-        </motion.div>
-        
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="hero-title"
-        >
-          Desburocratização rápida para empresas modernas.
-        </motion.h1>
-        
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="hero-subtitle"
-        >
-          Alvarás, licenças e gestão societária com 100% de visibilidade através do nosso portal exclusivo. Atendimento em todas as capitais do Brasil.
-        </motion.p>
-        
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="hero-buttons"
-        >
-          <button className="btn-primary" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            Solicitar Diagnóstico <ChevronRight size={18} />
-          </button>
-          <button className="btn-secondary">Ver como funciona</button>
-        </motion.div>
+      <div className="hero-wrapper">
+        <section className="hero">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="hero-pill"
+          >
+            <Zap size={16} color="var(--primary-color)" />
+            A nova era da assessoria paralegal
+          </motion.div>
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="hero-title"
+          >
+            Desburocratização rápida para empresas modernas.
+          </motion.h1>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="hero-subtitle"
+          >
+            Alvarás, licenças e gestão societária com 100% de visibilidade através do nosso portal exclusivo. Atendimento em todas as capitais do Brasil.
+          </motion.p>
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="hero-buttons"
+          >
+            <button className="btn-primary" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              Solicitar Diagnóstico <ChevronRight size={18} />
+            </button>
+            <button className="btn-secondary" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>Ver como funciona</button>
+          </motion.div>
 
-        {/* Dashboard Mockup Component */}
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="dashboard-mockup"
-        >
-          <div className="dashboard-header">
-            <div className="mac-btn close" />
-            <div className="mac-btn min" />
-            <div className="mac-btn max" />
-            <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginLeft: '1rem' }}>
-              app.sinalverde.com.br/dashboard
-            </span>
-          </div>
-          <div className="dashboard-content">
-            <div className="dashboard-card" style={{ borderLeft: '4px solid var(--primary-color)' }}>
-              <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Status Alvará</div>
-              <div style={{ fontSize: '1.2rem', fontWeight: 600, marginTop: '0.5rem' }}>Aprovado ✅</div>
-              <div style={{ fontSize: '0.8rem', color: 'var(--primary-color)', marginTop: '0.5rem' }}>Pronto para download</div>
+          {/* Dashboard Mockup Component */}
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="dashboard-mockup"
+          >
+            <div className="dashboard-header">
+              <div className="mac-btn close" />
+              <div className="mac-btn min" />
+              <div className="mac-btn max" />
+              <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginLeft: '1rem' }}>
+                app.sinalverde.com.br/dashboard
+              </span>
             </div>
-            <div className="dashboard-card" style={{ borderLeft: '4px solid #f59e0b' }}>
-              <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Alteração Contratual</div>
-              <div style={{ fontSize: '1.2rem', fontWeight: 600, marginTop: '0.5rem' }}>Na JUCESP ⏱️</div>
-              <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>Prazo: 2 dias</div>
+            <div className="dashboard-content">
+              <div className="dashboard-card" style={{ borderLeft: '4px solid var(--primary-color)' }}>
+                <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Status Alvará</div>
+                <div style={{ fontSize: '1.2rem', fontWeight: 600, marginTop: '0.5rem', color: 'var(--text-main)' }}>Aprovado ✅</div>
+                <div style={{ fontSize: '0.8rem', color: 'var(--primary-color)', marginTop: '0.5rem' }}>Pronto para download</div>
+              </div>
+              <div className="dashboard-card" style={{ borderLeft: '4px solid #f59e0b' }}>
+                <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Alteração Contratual</div>
+                <div style={{ fontSize: '1.2rem', fontWeight: 600, marginTop: '0.5rem', color: 'var(--text-main)' }}>Na JUCESP ⏱️</div>
+                <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>Prazo: 2 dias</div>
+              </div>
+              <div className="dashboard-card" style={{ borderLeft: '4px solid #3b82f6' }}>
+                <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Registro INPI</div>
+                <div style={{ fontSize: '1.2rem', fontWeight: 600, marginTop: '0.5rem', color: 'var(--text-main)' }}>Em Análise 🔍</div>
+                <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>Etapa 3 de 5</div>
+              </div>
             </div>
-            <div className="dashboard-card" style={{ borderLeft: '4px solid #3b82f6' }}>
-              <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Registro INPI</div>
-              <div style={{ fontSize: '1.2rem', fontWeight: 600, marginTop: '0.5rem' }}>Em Análise 🔍</div>
-              <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>Etapa 3 de 5</div>
-            </div>
-          </div>
-        </motion.div>
-      </section>
+          </motion.div>
+        </section>
+      </div>
 
       {/* Social Proof Stats */}
       <section className="stats-section">
