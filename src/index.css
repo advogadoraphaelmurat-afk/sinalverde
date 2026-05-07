@@ -412,7 +412,25 @@ body {
   
   #home { align-items: center !important; padding: 10rem 1rem 4rem !important; }
   
-  .hero-title-huge { font-size: 2.2rem !important; text-align: center !important; }
+  .hero-title-huge { font-size: 2rem !important; text-align: center !important; letter-spacing: 0.3rem !important; }
+  
+  /* Aggressively reduce all H2 and large text on mobile */
+  h2 { font-size: 1.6rem !important; }
+  .section-container h2 { font-size: 1.8rem !important; margin-bottom: 2rem !important; }
+  
+  /* Solution tabs mobile optimization */
+  .header-btn { 
+    padding: 0.6rem 1rem !important; 
+    font-size: 0.7rem !important; 
+    white-space: nowrap;
+  }
+  
+  .active-tab {
+    background: var(--primary-color) !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+  }
   
   /* Force single column for all grids on mobile */
   [style*="gridTemplateColumns: 1fr 1fr"],
@@ -420,11 +438,11 @@ body {
   #sobre > div,
   .solutions-grid {
     grid-template-columns: 1fr !important;
-    gap: 2rem !important;
+    gap: 1.5rem !important;
   }
   
-  .glass-card { padding: 2rem 1.5rem !important; }
+  .glass-card { padding: 1.5rem !important; }
   
-  .scrovex-footer { flex-direction: column; text-align: center; gap: 2rem; padding: 3rem 1rem; margin-bottom: 100px; }
+  .scrovex-footer { flex-direction: column; text-align: center; gap: 1.5rem; padding: 2rem 1rem; margin-bottom: 100px; }
 }
 
