@@ -70,7 +70,7 @@ function App() {
       <main className="app-container">
         
         {/* HERO SECTION */}
-        <section className="section-container" id="home" style={{ alignItems: 'flex-end', paddingTop: '10rem', paddingRight: '10%' }}>
+        <section className="section-container" id="home" style={{ alignItems: 'flex-end', paddingTop: '4rem', paddingRight: '10%' }}>
           <div className="scenic-blob scenic-1" />
           <div className="scenic-blob scenic-2" />
           <Abstract3D />
