@@ -148,7 +148,7 @@ function App() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4 }}
               >
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center', marginBottom: '6rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '6rem', maxWidth: '1200px', margin: '0 auto' }}>
                   <div>
                     <h2 style={{ fontSize: 'clamp(1.8rem, 6vw, 3rem)', marginBottom: '1.5rem', lineHeight: 1.1 }}>Gestão paralegal centralizada para operações complexas</h2>
                     <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', marginBottom: '2.5rem' }}>
@@ -215,7 +215,7 @@ function App() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4 }}
               >
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center', marginBottom: '6rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '6rem', maxWidth: '1200px', margin: '0 auto' }}>
                   <div>
                     <h2 style={{ fontSize: 'clamp(1.8rem, 6vw, 3rem)', marginBottom: '1.5rem', lineHeight: 1.1 }}>Lance seus empreendimentos sem burocracia</h2>
                     <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', marginBottom: '2.5rem' }}>
@@ -283,7 +283,7 @@ function App() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4 }}
               >
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center', marginBottom: '6rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '6rem', maxWidth: '1200px', margin: '0 auto' }}>
                   <div>
                     <h2 style={{ fontSize: 'clamp(1.8rem, 6vw, 3rem)', marginBottom: '1.5rem', lineHeight: 1.1 }}>Serviços paralegais acessíveis e eficientes</h2>
                     <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', marginBottom: '2.5rem' }}>
