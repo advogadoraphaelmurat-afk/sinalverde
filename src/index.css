@@ -39,6 +39,13 @@ body {
   width: calc(100% - 100px);
 }
 
+@media (max-width: 768px) {
+  .app-container {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+}
+
 /* Header - Glassmorphic */
 .glass-header {
   position: fixed;
@@ -176,12 +183,17 @@ body {
 
 /* Page Layout */
 .section-container {
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 6rem 4rem;
   position: relative;
+}
+
+/* Hero keeps full viewport height */
+.section-container#home {
+  min-height: 100vh;
 }
 
 /* Hero Section */
@@ -390,11 +402,16 @@ body {
 }
 
 @media (max-width: 768px) {
-  .app-container {
-    margin-left: 100px;
-    width: calc(100% - 100px);
-    min-height: 100vh;
+  .section-container {
+    padding: 3rem 1.2rem !important;
   }
+  .section-container#home {
+    min-height: 100svh;
+  }
+}
+
+@media (max-width: 768px) {
+  /* app-container mobile fix is defined above */
   
   .glass-sidebar {
     top: auto;
@@ -415,7 +432,7 @@ body {
   .glass-header { left: 0; padding: 0 1rem; height: 70px; }
   .header-btn { padding: 0.5rem 1rem; font-size: 0.7rem; }
   
-  #home { align-items: center !important; padding: 10rem 1rem 4rem !important; }
+  #home { align-items: center !important; padding: 6rem 1rem 4rem !important; min-height: 100svh !important; }
   
   .hero-title-huge { font-size: 2rem !important; text-align: center !important; letter-spacing: 0.3rem !important; }
   
