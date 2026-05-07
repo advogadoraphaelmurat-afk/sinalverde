@@ -507,28 +507,6 @@ function App() {
         </section>
 
         {/* BOTTOM SECTION matching Scrovex "Global Scale" */}
-        <section className="section-container" style={{ alignItems: 'center', textAlign: 'center', minHeight: '80vh' }}>
-          <div style={{ position: 'relative', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <div className="abstract-glow-1" style={{ width: '300px', height: '300px', position: 'relative', filter: 'blur(40px)', opacity: 0.3 }} />
-            <h2 style={{ fontSize: 'clamp(2.5rem, 10vw, 4rem)', marginTop: '-150px', position: 'relative', zIndex: 10 }}>Escala Nacional</h2>
-          </div>
-          
-          <div style={{ 
-            background: 'rgba(255,255,255,0.02)', 
-            border: '1px solid rgba(255,255,255,0.05)', 
-            padding: '4rem', 
-            borderRadius: '8px',
-            marginTop: '4rem',
-            maxWidth: '800px'
-          }}>
-            <p style={{ fontSize: '1.8rem', fontStyle: 'italic', marginBottom: '2rem' }}>
-              "A Plataforma da Sinal Verde simplifica a complexidade associada à gestão de múltiplas licenças e obrigações societárias."
-            </p>
-            <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1rem' }}>
-              <strong>CEO, Sinal Verde</strong> • Especialista Paralegal
-            </div>
-          </div>
-        </section>
 
         {/* FAQ SECTION */}
         <section className="section-container" id="faq" style={{ paddingTop: '5rem' }}>
@@ -593,11 +571,8 @@ function App() {
             </p>
             <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href="https://wa.me/5511963321755" target="_blank" rel="noopener noreferrer" className="header-btn" style={{ padding: '1.5rem 3rem', borderRadius: '50px', fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '1rem', background: '#25D366', border: 'none' }}>
-                <MessageSquare size={24} /> AGENDAR DIAGNÓSTICO GRATUITO
+                <MessageSquare size={24} /> Fale agora com um especialista
               </a>
-              <button onClick={() => scrollTo('servicos')} className="header-btn" style={{ padding: '1.5rem 3rem', borderRadius: '50px', fontSize: '1.2rem', background: 'transparent', border: '1px solid rgba(255,255,255,0.1)' }}>
-                VER TODOS OS SERVIÇOS
-              </button>
             </div>
           </div>
         </section>
