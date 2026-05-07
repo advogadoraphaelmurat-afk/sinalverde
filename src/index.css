@@ -468,3 +468,45 @@ body {
   .scrovex-footer { flex-direction: column; text-align: center; gap: 1.5rem; padding: 2rem 1rem; margin-bottom: 100px; }
 }
 
+
+/* ===== MOBILE OVERFLOW FIX ===== */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  /* Stats numbers row wrap fix */
+  .stats-row {
+    flex-wrap: wrap !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Prevent any child from overflowing */
+  .section-container > * {
+    max-width: 100%;
+  }
+
+  /* Fix glass-card overflow */
+  .glass-card {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Fix hero button overflowing on small screens */
+  .header-btn {
+    white-space: normal !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Fix abstract 3D element causing overflow */
+  .abstract-3d-center {
+    width: 280px !important;
+    height: 280px !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+}

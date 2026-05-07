@@ -148,7 +148,7 @@ function App() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4 }}
               >
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '6rem', maxWidth: '1200px', margin: '0 auto' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '2rem', alignItems: 'center', marginBottom: '4rem', maxWidth: '1200px', margin: '0 auto 4rem' }}>
                   <div>
                     <h2 style={{ fontSize: 'clamp(1.8rem, 6vw, 3rem)', marginBottom: '1.5rem', lineHeight: 1.1 }}>Gestão paralegal centralizada para operações complexas</h2>
                     <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', marginBottom: '2.5rem' }}>
@@ -158,7 +158,7 @@ function App() {
                       AGENDAR DIAGNÓSTICO GRATUITO
                     </a>
                     
-                    <div style={{ display: 'flex', gap: '3rem', marginTop: '4rem' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginTop: '2.5rem' }}>
                       <div><span style={{ display: 'block', fontSize: '2rem', fontWeight: 900, color: 'var(--primary-color)' }}>50+</span><span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>GRUPOS ATENDIDOS</span></div>
                       <div><span style={{ display: 'block', fontSize: '2rem', fontWeight: 900, color: 'var(--accent-cyan)' }}>NACIONAL</span><span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>ATUAÇÃO</span></div>
                       <div><span style={{ display: 'block', fontSize: '2rem', fontWeight: 900, color: 'var(--secondary-color)' }}>100%</span><span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>COMPLIANCE</span></div>
@@ -215,7 +215,7 @@ function App() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4 }}
               >
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '6rem', maxWidth: '1200px', margin: '0 auto' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '2rem', alignItems: 'center', marginBottom: '4rem', maxWidth: '1200px', margin: '0 auto 4rem' }}>
                   <div>
                     <h2 style={{ fontSize: 'clamp(1.8rem, 6vw, 3rem)', marginBottom: '1.5rem', lineHeight: 1.1 }}>Lance seus empreendimentos sem burocracia</h2>
                     <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', marginBottom: '2.5rem' }}>
@@ -225,7 +225,7 @@ function App() {
                       REGULARIZAR EMPREENDIMENTO
                     </a>
                     
-                    <div style={{ display: 'flex', gap: '3rem', marginTop: '4rem' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginTop: '2.5rem' }}>
                       <div><span style={{ display: 'block', fontSize: '2rem', fontWeight: 900, color: 'var(--primary-color)' }}>300+</span><span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>EMPREENDIMENTOS</span></div>
                       <div><span style={{ display: 'block', fontSize: '2rem', fontWeight: 900, color: 'var(--accent-cyan)' }}>30 DIAS</span><span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>MÉDIA LICENÇAS</span></div>
                       <div><span style={{ display: 'block', fontSize: '2rem', fontWeight: 900, color: 'var(--secondary-color)' }}>ZERO</span><span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>EMBARGOS</span></div>
@@ -283,7 +283,7 @@ function App() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4 }}
               >
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '6rem', maxWidth: '1200px', margin: '0 auto' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '2rem', alignItems: 'center', marginBottom: '4rem', maxWidth: '1200px', margin: '0 auto 4rem' }}>
                   <div>
                     <h2 style={{ fontSize: 'clamp(1.8rem, 6vw, 3rem)', marginBottom: '1.5rem', lineHeight: 1.1 }}>Serviços paralegais acessíveis e eficientes</h2>
                     <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', marginBottom: '2.5rem' }}>
@@ -298,7 +298,7 @@ function App() {
                       </button>
                     </div>
                     
-                    <div style={{ display: 'flex', gap: '3rem', marginTop: '4rem' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginTop: '2.5rem' }}>
                       <div><span style={{ display: 'block', fontSize: '2rem', fontWeight: 900, color: 'var(--primary-color)' }}>1000+</span><span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>CLIENTES ATENDIDOS</span></div>
                       <div><span style={{ display: 'block', fontSize: '2rem', fontWeight: 900, color: 'var(--accent-cyan)' }}>JUSTO</span><span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>PREÇOS ACESSÍVEIS</span></div>
                       <div><span style={{ display: 'block', fontSize: '2rem', fontWeight: 900, color: 'var(--secondary-color)' }}>VIP</span><span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>SUPORTE DEDICADO</span></div>
