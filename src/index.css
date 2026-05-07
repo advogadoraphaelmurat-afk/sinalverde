@@ -26,6 +26,7 @@ html, body {
     radial-gradient(circle at 100% 50%, rgba(236, 72, 153, 0.15) 0%, transparent 40%),
     radial-gradient(circle at 0% 100%, rgba(6, 182, 212, 0.1) 0%, transparent 40%),
     linear-gradient(180deg, rgba(12, 10, 31, 1) 0%, rgba(26, 21, 58, 1) 50%, rgba(12, 10, 31, 1) 100%);
+  background-attachment: fixed;
 }
 
 ::-webkit-scrollbar { width: 8px; }
@@ -260,7 +261,7 @@ html, body {
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
   animation: float 20s ease-in-out infinite alternate;
 }
