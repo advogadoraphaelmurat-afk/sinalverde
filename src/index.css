@@ -195,7 +195,10 @@ html, body {
 }
 
 .section-container#home {
-  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: flex-end;
 }
 
@@ -223,13 +226,11 @@ html, body {
    ABSTRACT 3D
    ===================== */
 .abstract-3d-center {
-  position: absolute;
-  top: 45%;
+  position: absolute !important;
+  top: 50%;
   left: 75%;
   transform: translate(-50%, -50%) scale(1.1);
-  width: 500px;
-  height: 500px;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -418,7 +419,7 @@ html, body {
   .header-logo span { font-size: 1rem; }
   .header-btn { padding: 0.5rem 1rem; font-size: 0.7rem; }
   
-  #home { align-items: center !important; padding: 8rem 1rem 4rem !important; min-height: 100svh; }
+  #home { align-items: center !important; padding: 4rem 1rem 4rem !important; min-height: 100svh; }
   .hero-title-huge { font-size: 3rem !important; text-align: center !important; letter-spacing: 0.3rem !important; }
   .section-container { padding: 4rem 1.2rem 3rem !important; }
   
