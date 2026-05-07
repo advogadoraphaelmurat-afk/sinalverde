@@ -24,8 +24,7 @@ html, body {
   background-image: 
     radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 100% 50%, rgba(236, 72, 153, 0.15) 0%, transparent 40%),
-    radial-gradient(circle at 0% 100%, rgba(6, 182, 212, 0.1) 0%, transparent 40%),
-    linear-gradient(180deg, rgba(12, 10, 31, 1) 0%, rgba(26, 21, 58, 1) 50%, rgba(12, 10, 31, 1) 100%);
+    radial-gradient(circle at 0% 100%, rgba(6, 182, 212, 0.1) 0%, transparent 40%);
 }
 
 ::-webkit-scrollbar { width: 8px; }
@@ -248,27 +247,6 @@ html, body {
   box-shadow: inset 0 0 50px rgba(139, 92, 246, 0.5);
 }
 
-/* Scenic Elements */
-.scenic-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  z-index: -1;
-  pointer-events: none;
-  animation: float 20s ease-in-out infinite alternate;
-}
-
-@keyframes float {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(50px, 50px) scale(1.1); }
-  100% { transform: translate(-50px, 20px) scale(0.9); }
-}
-
-.scenic-1 { width: 800px; height: 800px; background: radial-gradient(circle, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.1), transparent 70%); top: -10%; right: -20%; animation-duration: 30s; }
-.scenic-2 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(236, 72, 153, 0.15), rgba(6, 182, 212, 0.1), transparent 70%); top: 40%; left: -15%; animation-duration: 25s; animation-delay: -5s; }
-.scenic-3 { width: 900px; height: 900px; background: radial-gradient(circle, rgba(6, 182, 212, 0.12), rgba(139, 92, 246, 0.08), transparent 70%); bottom: 20%; right: -10%; animation-duration: 35s; animation-delay: -10s; }
-.scenic-4 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(16, 185, 129, 0.1), transparent 70%); bottom: -5%; left: 10%; animation-duration: 20s; }
-
 @keyframes spin { 100% { transform: rotate(360deg); } }
 @keyframes morph {
   0%   { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
@@ -350,70 +328,79 @@ html, body {
    MOBILE  ≤ 768px
    ===================== */
 @media (max-width: 768px) {
-  .app-container {
-    margin-left: 0 !important;
-    width: 100% !important;
-    min-height: 100vh;
-    padding-bottom: 80px; /* Space for bottom sidebar */
-  }
-  
+
+  /* Sidebar vira barra inferior */
   .glass-sidebar {
     position: fixed;
     top: auto;
-    bottom: 0;
-    left: 0;
-    transform: none;
-    width: 100%;
-    height: 70px;
+    bottom: 0.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 2rem);
+    max-width: 400px;
+    height: 58px;
     flex-direction: row;
     justify-content: space-around;
     padding: 0 1rem;
-    border-radius: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-left: none;
-    border-right: none;
-    z-index: 9999;
+    border-radius: 18px;
+    gap: 0;
+    z-index: 1100;
   }
-  
+
   .sidebar-item::after { display: none; }
-  
-  .glass-header { left: 0; right: 0; padding: 0 1rem; height: 70px; }
-  .header-logo span { font-size: 1rem; }
-  .header-btn { padding: 0.5rem 1rem; font-size: 0.7rem; }
-  
-  #home { align-items: center !important; padding: 8rem 1rem 4rem !important; min-height: 100svh; }
-  .hero-title-huge { font-size: 3rem !important; text-align: center !important; letter-spacing: 0.3rem !important; }
-  .section-container { padding: 4rem 1.2rem 3rem !important; }
-  
-  h2 { font-size: 1.8rem !important; text-align: center !important; }
-  
-  /* Solution tabs mobile optimization */
-  .header-btn { 
-    padding: 0.6rem 1rem !important; 
-    font-size: 0.7rem !important; 
+
+  /* Header ocupa 100% sem offset da sidebar */
+  .glass-header {
+    left: 0;
+    right: 0;
+    padding: 0 1rem;
+    height: 60px;
   }
-  
-  /* Force single column for all grids on mobile */
+
+  /* Container sem margem da sidebar */
+  .app-container {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Seções com padding menor */
+  .section-container {
+    padding: 4rem 1.2rem 3rem !important;
+  }
+
+  /* Hero centralizado */
+  .section-container#home {
+    min-height: 100svh;
+    align-items: center !important;
+    padding-top: 5rem !important;
+    text-align: center;
+  }
+
+  .hero-title-huge {
+    text-align: center !important;
+    letter-spacing: 0.3rem !important;
+  }
+
+  /* Todos os grids viram 1 coluna */
   .resp-grid-2,
   .resp-grid-2-small,
   .resp-grid-3,
   .resp-grid-4 {
     grid-template-columns: 1fr !important;
-    text-align: center !important;
-  }
-  
-  .glass-card { 
-    padding: 2rem 1.5rem !important; 
-    width: 100% !important;
-    text-align: center !important;
   }
 
-  .stats-row { justify-content: center; }
-  
-  .scrovex-footer { 
+  /* Fonte dos H2 menor */
+  h2 { font-size: clamp(1.5rem, 6vw, 2rem) !important; }
+
+  /* Footer com espaço para a barra inferior */
+  .scrovex-footer {
     padding: 2rem 1.2rem;
-    padding-bottom: 100px !important; 
+    margin-bottom: 75px;
     flex-direction: column;
     text-align: center;
+  }
+
+  footer {
+    margin-bottom: 80px !important;
   }
 }
