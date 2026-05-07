@@ -510,3 +510,59 @@ html, body {
     transform: translate(-50%, -50%) !important;
   }
 }
+
+/* ===== RESPONSIVE GRID CLASSES ===== */
+/* 2 colunas no desktop, 1 no mobile */
+.resp-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* 2 colunas pequenas no desktop, 1 no mobile */
+.resp-grid-2-small {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* 3 colunas no desktop, 1 no mobile */
+.resp-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* 4 colunas no desktop, 2 no tablet, 1 no mobile */
+.resp-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* Stats row */
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .resp-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .resp-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .resp-grid-2,
+  .resp-grid-2-small,
+  .resp-grid-3,
+  .resp-grid-4 {
+    grid-template-columns: 1fr !important;
+  }
+}
