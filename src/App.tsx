@@ -45,9 +45,9 @@ function App() {
         <div className="sidebar-item" data-label="Início" onClick={() => scrollTo('home')}><Home size={20} /></div>
         <div className="sidebar-item" data-label="Sobre" onClick={() => scrollTo('sobre')}><Users size={20} /></div>
         <div className="sidebar-item" data-label="Serviços" onClick={() => scrollTo('servicos')}><Briefcase size={20} /></div>
-        <div className="sidebar-item" data-label="Tecnologia" onClick={() => scrollTo('servicos')}><Layers size={20} /></div>
-        <div style={{ marginTop: 'auto' }}>
-          <div className="sidebar-item" data-label="Portal VIP"><Lock size={20} /></div>
+        <div className="sidebar-item" data-label="Contato" onClick={() => scrollTo('faq')}><Layers size={20} /></div>
+        <div className="sidebar-push">
+          <div className="sidebar-item" data-label="WhatsApp" onClick={() => window.open('https://wa.me/5511963321755','_blank')}><Lock size={20} /></div>
         </div>
       </aside>
 
@@ -62,7 +62,9 @@ function App() {
           <a href="#servicos" onClick={(e) => { e.preventDefault(); scrollTo('servicos'); }}>SERVIÇOS</a>
           <a href="#contato" onClick={(e) => { e.preventDefault(); scrollTo('faq'); }}>CONTATO</a>
         </div>
-        <button className="header-btn">ACESSAR PORTAL</button>
+        <a href="https://wa.me/5511963321755" target="_blank" rel="noopener noreferrer" className="header-btn">
+          Fale Conosco
+        </a>
       </header>
 
       <main className="app-container">

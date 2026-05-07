@@ -168,14 +168,20 @@ html, body {
   opacity: 1;
 }
 
+/* Pushes last sidebar item to bottom on desktop */
+.sidebar-push {
+  margin-top: auto;
+}
+
 /* =====================
    LAYOUT
    ===================== */
 .app-container {
-  margin-left: 90px; /* sidebar width */
+  margin-left: 90px;
   width: calc(100% - 90px);
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
 
 .section-container {
@@ -184,6 +190,7 @@ html, body {
   justify-content: center;
   padding: 5rem 4rem;
   position: relative;
+  overflow: hidden;
 }
 
 .section-container#home {
@@ -253,9 +260,15 @@ html, body {
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
   animation: float 20s ease-in-out infinite alternate;
+}
+
+/* Ensure all section content sits above blobs */
+.section-container > *:not(.scenic-blob) {
+  position: relative;
+  z-index: 1;
 }
 
 @keyframes float {
@@ -350,11 +363,34 @@ html, body {
    MOBILE  ≤ 768px
    ===================== */
 @media (max-width: 768px) {
+  /* Prevent ALL horizontal overflow */
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
   .app-container {
     margin-left: 0 !important;
     width: 100% !important;
+    max-width: 100vw !important;
     min-height: 100vh;
-    padding-bottom: 80px; /* Space for bottom sidebar */
+    padding-bottom: 80px;
+    overflow-x: hidden !important;
+  }
+
+  /* Hide large blobs on mobile to prevent overflow */
+  .scenic-blob {
+    display: none;
+  }
+
+  /* Collapse ALL inline grid styles on mobile */
+  [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Wrap flex rows that could overflow */
+  [style*="display: flex"] {
+    flex-wrap: wrap !important;
   }
   
   .glass-sidebar {
